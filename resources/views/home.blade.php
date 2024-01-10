@@ -3,7 +3,7 @@
 @section('content')
 <div class="container"> 
 
-Coockie: {{Cookie::get('maselah')}}
+Coockie: {{Cookie::get('maselah_cackes')}}
 
     <h2>{{ $title }}</h2>
 
