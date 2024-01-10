@@ -55,7 +55,7 @@ Coockie: {{Cookie::get('maselah')}}
       </div>
       <div class="modal-body">
 
-      <form action="{{route('sales.store')}}" method="post" enctype="multipart/form-data">
+      <form action="{{url('sales')}}" method="post" enctype="multipart/form-data">
         @csrf 
         <label for="name">Name</label>
         <input type="text" name="name" class="form-control">
