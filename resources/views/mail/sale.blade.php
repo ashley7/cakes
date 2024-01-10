@@ -9,7 +9,7 @@
 
 <p>Hello {{$sale->name}}</p>
 <p>Please visit this Link to access your file</p>
-<a href="{{env('APP_URL')}}/sales/{{$hexEmail}}">File Access Link</a>
+<a href="{{env('APP_URL')}}/your_file/{{$hexEmail}}">File Access Link</a>
     
 </body>
 </html>

@@ -11,7 +11,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
 
-Route::get('sales/{hex_email}','SaleController@show');
+Route::get('your_file/{hex_email}','SaleController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
