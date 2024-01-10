@@ -111,7 +111,7 @@ class SaleController extends Controller
 
         }else{
 
-            // if(Cookie::get('maselah') != $hex_email)   return "You are not the owner of this file. ".Cookie::get('maselah');
+            if(Cookie::get('maselah') != $hex_email)   return "You are not the owner of this file. ".Cookie::get('maselah');
 
             $data = [
                 'sale'=>$sale    
