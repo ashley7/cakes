@@ -3,6 +3,8 @@
 @section('content')
 <div class="container"> 
 
+Coockie: {{Cookie::get('maselah')}}
+
     <h2>{{ $title }}</h2>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
