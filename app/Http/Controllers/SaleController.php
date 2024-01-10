@@ -93,8 +93,6 @@ class SaleController extends Controller
 
         $email = hex2bin($hex_email);
 
-        return $email;
-
         $sale = Sale::where('email',$email)->get();
 
         if(empty($sale)) return "Resource Not found";
