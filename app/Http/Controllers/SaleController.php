@@ -99,11 +99,11 @@ class SaleController extends Controller
 
         $sale = $sale->last();       
       
-        if (!isset($_COOKIE['maselah']) && empty($sale->time_accessed)){
+        if (!isset($_COOKIE['maselah_cackes']) && empty($sale->time_accessed)){
  
             $expiration_time = now()->addYears(50)->timestamp;
 
-            setcookie("maselah", $hex_email, $expiration_time);
+            setcookie("maselah_cackes", $hex_email, $expiration_time);
 
             $sale->time_accessed = now();
 
@@ -113,7 +113,7 @@ class SaleController extends Controller
 
         }else{
 
-            if($_COOKIE['maselah'] != $hex_email)   return "You are not the owner of this file. ".$_COOKIE['maselah'];
+            if($_COOKIE['maselah_cackes'] != $hex_email)   return "You are not the owner of this file. ".$_COOKIE['maselah_cackes'];
 
             $data = [
                 'sale'=>$sale    
