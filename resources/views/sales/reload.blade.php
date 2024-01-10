@@ -10,7 +10,7 @@
                 <div class="card-body">
 
                                     
-                        <a href="/sales/{{$hex_email}}" class="btn btn-primary">Go to File</a>                    
+                        <a href="/your_file/{{$hex_email}}" class="btn btn-primary">Go to File</a>                    
 
                    
                 </div>
