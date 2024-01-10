@@ -99,9 +99,11 @@ class SaleController extends Controller
 
         $sale = $sale->last();       
       
-        if (!$request->hasCookie('maselah') && empty($sale->time_accessed)){
+        if (!isset($_COOKIE['maselah']) && empty($sale->time_accessed)){
+ 
+            $expiration_time = now()->addYears(50)->timestamp;
 
-            Cookie::forever('maselah', $hex_email);
+            setcookie("maselah", $hex_email, $expiration_time);
 
             $sale->time_accessed = now();
 
@@ -111,7 +113,7 @@ class SaleController extends Controller
 
         }else{
 
-            if(Cookie::get('maselah') != $hex_email)   return "You are not the owner of this file. ".Cookie::get('maselah');
+            if($_COOKIE['maselah'] != $hex_email)   return "You are not the owner of this file. ".$_COOKIE['maselah'];
 
             $data = [
                 'sale'=>$sale    
