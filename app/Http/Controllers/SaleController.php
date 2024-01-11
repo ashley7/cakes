@@ -97,33 +97,27 @@ class SaleController extends Controller
         
             return "Resource Not found";
 
-        $sale = $sale->last();       
-      
-        if (!isset($_COOKIE['maselah_cackes'])){
- 
+        $sale = $sale->last();
+
+        if(empty($sale->time_accessed)){
+
             $expiration_time = now()->addYears(50)->timestamp;
 
             setcookie("maselah_cackes", $hex_email, $expiration_time);
 
-            if(empty($sale->time_accessed)){
+            $sale->time_accessed = now();
 
-                $sale->time_accessed = now();
-
-                $sale->save();
-                
-            }          
+            $sale->save();
 
             return view('sales.reload')->with(['hex_email'=>$hex_email]);
 
-        }else{
+        }
+      
+        if (!isset($_COOKIE['maselah_cackes']))  
+        
+            return "It is nolonger your file";
 
-            if(!isset($_COOKIE['maselah_cackes']) || empty($sale->time_accessed)) 
-            
-                return "It is nolonger your file";
-
-            if($_COOKIE['maselah_cackes'] != $hex_email)   
-            
-                return "You are not the owner of this file. ".$_COOKIE['maselah_cackes'];
+        if($_COOKIE['maselah_cackes'] != $hex_email)  {
 
             $data = [
                 'sale'=>$sale    
@@ -131,8 +125,7 @@ class SaleController extends Controller
 
             return view('sales.accessfile')->with($data);
 
-        } 
-        
+        }
     }
 
     /**
