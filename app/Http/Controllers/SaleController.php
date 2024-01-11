@@ -89,13 +89,13 @@ class SaleController extends Controller
     public function show($hex_email)
     {
 
-        $request = Request::capture();
-
         $email = hex2bin($hex_email);
 
         $sale = Sale::where('email',$email)->get();
 
-        if(empty($sale)) return "Resource Not found";
+        if(empty($sale)) 
+        
+            return "Resource Not found";
 
         $sale = $sale->last();       
       
@@ -113,7 +113,13 @@ class SaleController extends Controller
 
         }else{
 
-            if($_COOKIE['maselah_cackes'] != $hex_email)   return "You are not the owner of this file. ".$_COOKIE['maselah_cackes'];
+            if(!isset($_COOKIE['maselah_cackes'])) 
+            
+                return "It is nolonger your file";
+
+            if($_COOKIE['maselah_cackes'] != $hex_email)   
+            
+                return "You are not the owner of this file. ".$_COOKIE['maselah_cackes'];
 
             $data = [
                 'sale'=>$sale    
