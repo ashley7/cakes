@@ -99,21 +99,25 @@ class SaleController extends Controller
 
         $sale = $sale->last();       
       
-        if (!isset($_COOKIE['maselah_cackes']) && empty($sale->time_accessed)){
+        if (!isset($_COOKIE['maselah_cackes'])){
  
             $expiration_time = now()->addYears(50)->timestamp;
 
             setcookie("maselah_cackes", $hex_email, $expiration_time);
 
-            $sale->time_accessed = now();
+            if(empty($sale->time_accessed)){
 
-            $sale->save();
+                $sale->time_accessed = now();
+
+                $sale->save();
+                
+            }          
 
             return view('sales.reload')->with(['hex_email'=>$hex_email]);
 
         }else{
 
-            if(!isset($_COOKIE['maselah_cackes'])) 
+            if(!isset($_COOKIE['maselah_cackes']) || empty($sale->time_accessed)) 
             
                 return "It is nolonger your file";
 
