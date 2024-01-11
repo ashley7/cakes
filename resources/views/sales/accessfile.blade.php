@@ -18,15 +18,7 @@
 @section('styles')
 
     <style>
-         body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f2f2f2;
-        }
+       
 
         #pdfContainer {
             position: relative;
