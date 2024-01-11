@@ -5,7 +5,7 @@
     <div class="card">               
         <div class="card-body"> 
             
-             <iframe src="{{asset('files/'.$sale->file_url)}}" width="100%" height="1000px"></iframe>
+             <embed src="{{asset('files/'.$sale->file_url)}}" width="100%" height="1000px" allowfullscreen sandbox="allow-same-origin allow-scripts"></div>
 
                                     
         </div>
