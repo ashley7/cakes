@@ -44,8 +44,6 @@
             display: none;
         }
     </style>
- 
-
 @endsection
 
 @push('scripts')
