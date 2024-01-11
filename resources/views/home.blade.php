@@ -31,6 +31,7 @@
                             <td>{{$sale->created_at}}</td>
                             <td>{{$sale->name}}</td>
                             <td>{{$sale->email}}</td>
+                            <td>{{$sale->time_accessed}}</td>
                         </tr>
                         @endforeach
                     </tbody>
