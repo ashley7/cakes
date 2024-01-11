@@ -126,7 +126,7 @@ class SaleController extends Controller
             return view('sales.accessfile')->with($data);
 
         }
-            return "Coockie: ".$_COOKIE['maselah_cackes'];
+            return "Coockie: ".$_COOKIE['maselah_cackes']." = ".$hex_email;
         
     }
 
