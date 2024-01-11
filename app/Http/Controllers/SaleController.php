@@ -117,7 +117,7 @@ class SaleController extends Controller
         
             return "It is nolonger your file";
 
-        if($_COOKIE['maselah_cackes'] != $hex_email)  {
+        if($_COOKIE['maselah_cackes'] == $hex_email)  {
 
             $data = [
                 'sale'=>$sale    
