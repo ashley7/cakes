@@ -45,4 +45,15 @@
       }
     });
   </script>
+
+<script>
+    document.addEventListener('contextmenu', function(event) {
+      var isPdfElement = event.target.nodeName === 'EMBED' && event.target.type === 'application/pdf';
+
+      if (isPdfElement) {
+        event.preventDefault();
+        // alert('Right-click is disabled on this PDF.');
+      }
+    });
+  </script>
 @endpush
