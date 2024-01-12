@@ -103,9 +103,13 @@ class SaleController extends Controller
 
             setcookie("maselah_cackes", $hex_email, $expiration_time);
 
-            $sale->time_accessed = now();
+            if (isset($_COOKIE['maselah_cackes']))  {
 
-            $sale->save();
+                $sale->time_accessed = now();
+
+                $sale->save();
+
+            }           
 
             return view('sales.reload')->with(['hex_email'=>$hex_email]);
 
