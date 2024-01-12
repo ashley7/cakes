@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Str;
 
 class Sale extends Model
@@ -21,6 +22,16 @@ class Sale extends Model
 
         return $file_url;   
              
+    }
+
+    public static function setUserCoockie($value) {
+        // return response("File set successfully")->cookie(
+        //     'cakes', $value, time()
+        // );
+
+        Cookie::queue(Cookie::make('cake', $value, time()));
+ 
+        Cookie::queue('cake', $value, time());
     }
 
   

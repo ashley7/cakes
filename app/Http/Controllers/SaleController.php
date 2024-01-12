@@ -86,28 +86,30 @@ class SaleController extends Controller
      * @param  \App\Sale  $sale
      * @return \Illuminate\Http\Response
      */
-    public function show($hex_email)
-    {
-
+    public function show(Request $request, $hex_email)
+    {    
+        
         $email = hex2bin($hex_email);
 
         $sale = Sale::where('email',$email)->get();
 
-        if(empty($sale))  return view('sales.bad_file')->with(['message'=>'Resource Not found']);     
+        if(empty($sale))  
+        
+            return view('sales.bad_file')->with(['message'=>'Resource Not found']);     
 
         $sale = $sale->last();
 
         if(empty($sale->time_accessed)){
 
-            $expiration_time = now()->addYears(50)->timestamp;
-
-            setcookie("maselah_cackes", $hex_email, $expiration_time);
-
-            if (isset($_COOKIE['maselah_cackes']))  {
+            Sale::setUserCoockie($hex_email);
+    
+            if (!empty(Cookie::get('cake')))  {
 
                 $sale->time_accessed = now();
 
                 $sale->save();
+
+                goto readfile;
 
             }           
 
@@ -115,11 +117,13 @@ class SaleController extends Controller
 
         }
       
-        if (!isset($_COOKIE['maselah_cackes']))  
+        if (empty(Cookie::get('cake')))   
         
             return view('sales.bad_file')->with(['message'=>'It is nolonger your file']);
 
-        if($_COOKIE['maselah_cackes'] == $hex_email)  {
+            readfile:
+
+        if(Cookie::get('cake')==$hex_email)  {
 
             $data = [
                 'sale'=>$sale    
@@ -129,7 +133,7 @@ class SaleController extends Controller
 
         }
 
-        return view('sales.bad_file')->with(['message'=>'Invalid Varification data '.$_COOKIE['maselah_cackes']]);          
+        return view('sales.bad_file')->with(['message'=>'Invalid Varification data '.Cookie::get('cake') ]);          
         
     }
 
