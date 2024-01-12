@@ -84,9 +84,13 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        // 'address' => env('MAIL_FROM_ADDRESS', 'mysticahope2013@gmail.com'),
+        'address' => 'mysticahope2013@gmail.com',
+        'name' => 'Manzelah Group of Companies',
     ],
+
+    'reply_to' => ['address' => 'mysticahope2013@gmail.com', 'name' => 'Manzelah Group of Companies'],
+
 
     /*
     |--------------------------------------------------------------------------

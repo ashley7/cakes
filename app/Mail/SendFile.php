@@ -29,6 +29,6 @@ class SendFile extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.sale');
+        return $this->subject('Manzelah Group of Companies')->view('mail.sale');
     }
 }

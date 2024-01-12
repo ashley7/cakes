@@ -13,6 +13,14 @@ Route::get('/', function () {
 
 });
 
+
+
+Route::get('/mail', function () {
+
+    return  view("mail.sale");
+
+});
+
 Auth::routes();
 
 Route::get('your_file/{hex_email}','SaleController@show');
