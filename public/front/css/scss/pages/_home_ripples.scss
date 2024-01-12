@@ -1,0 +1,27 @@
+/* ---------------------------------------------------------------- */
+/* 29.Ripples Effect                            
+/* ---------------------------------------------------------------- */
+.hero-ripless-banner {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+    background-size: cover;
+    background-position: center center;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background: $color_dark_bg;
+    }
+    .container,.row, .banner-wrap {
+        height: 100%;
+    }
+}

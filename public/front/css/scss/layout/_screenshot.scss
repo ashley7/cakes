@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------------- */
+/* 14.Screenshot                            
+/* ---------------------------------------------------------------- */
+#screenshot {
+    .screenshot-carousel {
+        position: relative;
+        .owl-item img {
+            width: auto;
+            display: inline-block;
+        }
+        .owl-item {
+            text-align: center;
+            &.active {
+                .testimonials-header {
+                    animation: zoomIn 0.8s ease;
+                }    
+            }
+        }
+    }
+    .owl-theme .owl-nav {
+        button{
+            width: 56px;
+            height: 56px;
+            line-height: 56px;
+            transition: $transition_default;
+            text-align: center;
+            border-radius: 5px;
+            background: $color_primary;
+            color: $color_white;
+            margin-bottom: 0;
+            margin-top: 30px;
+            &:hover {
+                background: darken($color_primary,10%);
+                color: $color_white;  
+            }
+            &.owl-next {
+                right: 0;
+            }
+            &.owl-prev {
+                left: 0;
+            }
+        }
+    }
+}

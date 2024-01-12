@@ -1,0 +1,27 @@
+/* ---------------------------------------------------------------- */
+/* 28.Youtube BG Video                            
+/* ---------------------------------------------------------------- */
+.hero-video-wrap {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container,.row, .banner-wrap {
+        height: 100%;
+    }
+    .hero-overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        opacity: 0.6;
+        background: $color_dark_bg;
+    }
+    .video-content {
+        z-index: 27;
+        position: relative;
+    }
+}

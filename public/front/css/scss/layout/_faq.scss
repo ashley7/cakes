@@ -1,0 +1,58 @@
+/* ---------------------------------------------------------------- */
+/* 18.Faq                                                   
+/* ---------------------------------------------------------------- */
+#faq {
+    z-index: 5;
+    position: relative;
+}
+.accordion-item {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .accordion-item-header {
+        a {
+            color: $color_black;
+            padding: 30px 60px 30px 30px;
+            border: 1px solid $color_grey;
+            display: block;
+            position: relative;
+            font: {
+                weight: 500;
+            }
+            i{
+                margin-right: 15px;
+                color: $color_primary;
+            }
+            &:after {
+                content: "\f067";
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                color: $color_primary;
+                font: {
+                    family: "Font Awesome 5 Free";
+                    size: 1rem;
+                    weight: 700;
+                }
+            }
+            &[aria-expanded="true"]:after {
+                content: "\f068";
+            }
+        }
+    }
+    .accordion-body {
+        padding:30px;
+        background: $color_white;
+        border: 1px solid $color_grey;
+        border-top: 0;
+    }
+}
+ /* Responsive Media Query */
+.faq-image {
+    @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}

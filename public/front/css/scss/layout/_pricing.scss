@@ -1,0 +1,106 @@
+/* ---------------------------------------------------------------- */
+/* 15.Pricing                          
+/* ---------------------------------------------------------------- */
+.price-table {
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius:5px;
+    margin-bottom: 30px;
+    transition: $transition_default;
+    box-shadow: 0 20px 30px 0 $color_blue_shadow;
+    &.active {
+        background: $color_primary;
+        box-shadow: 0 20px 49px 0 rgba($color_primary,0.35);
+        .price-icon {
+            border-right:5px dashed $color_white;
+            border-bottom:5px solid $color_white;
+            i {
+                background: rgba($color_white, 0.1);
+            }
+        }
+        .price-text {
+            h2 {
+                color: $color_white !important;
+            }
+        }
+        .price-list {
+            li {
+                color: $color_white;
+            }
+        }
+        .price-title {
+            h6 {
+                color: $color_white;
+            }
+        }
+        .price-badge {
+            background: $color_white;
+            color: $color_primary;
+            &:after {
+                border-color:  $color_white transparent $color_white $color_white;
+            }
+        }
+    }
+    .price-badge {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        transform: rotate(90deg);
+        padding: 10px;
+        font-size: 15px;
+        background: $color_primary;
+        color: $color_white;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -40px;
+            border:21px solid;
+            border-color:  $color_primary transparent $color_primary $color_primary;
+        }
+    }
+    .price-title {
+        margin-bottom: 30px;
+    }
+    .price-text {
+        margin-bottom: 20px;
+        h2 {
+            font: {
+                size: 2.75rem
+            }
+        }
+    }
+    .price-icon {
+        border-right:5px dashed $color_primary;
+        border-bottom:5px solid $color_primary;
+        padding: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 20px;
+        i {
+            text-align: center;
+            color: $color_white;
+            display: inline-block;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            font: {
+                size: 25px;
+            }
+            background: $color_primary;
+        }
+    }
+    .price-list {
+        margin-bottom: 30px;
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

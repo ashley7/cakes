@@ -1,0 +1,110 @@
+/* ---------------------------------------------------------------- */
+/* 16.Testimonials                          
+/* ---------------------------------------------------------------- */
+#testimonials {
+    z-index: 5;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../img/clients/clients-bg.png);
+    background-size: cover;
+    background-position: center center;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: -5;
+        background: $color_primary;
+    }
+    .testimonials-carousel {
+        position: relative;
+        .owl-item img {
+            width: auto;
+        }
+        .owl-item {
+            &.active {
+                .testimonials-header {
+                    animation: zoomIn 0.8s ease;
+                }    
+            }
+        }
+    }
+    .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: 30px;
+        line-height: 0;
+    }
+    .owl-theme .owl-dots .owl-dot {
+        span {
+            background: transparent;
+            border:2px solid $color_white;
+            margin: 0 5px;
+            width:  11px;
+            height: 11px;
+        }
+        &.active span {
+            background: $color_white;
+        }
+    } 
+}
+.testimonials-item {
+    text-align: center;
+    background: $color_white;
+    padding: 40px 30px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        background: $color_white;
+        opacity: 0.5;
+        width: 90%;
+        height: 20px;
+        left: 50%;
+        border-radius: 0 0 10px 10px;
+        transform: translateX(-50%);
+    }
+    .testimonials-header {
+        display: inline-block;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        padding: 10px;
+        position: relative;
+        border-right:5px dashed $color_primary;
+        border-bottom:5px solid $color_primary;
+    }
+    img {
+        display: inline-block !important;
+        text-align: center;
+        border-radius: 50%;
+    }
+    .testimonials-body {
+        h5 {
+            margin-bottom: 3px;
+        }
+        span {
+            display: block;
+            margin-bottom: 20px;
+            color: $color_primary;
+            font: {
+                weight: 500; 
+            }
+        }
+        p {
+            font: {
+                size: 1.2rem;
+                style: italic;
+            }
+        }
+        .testimonial-rating {
+            margin-top: 20px;
+            i {
+                color: $color_warning;
+            }
+        }
+    }
+}

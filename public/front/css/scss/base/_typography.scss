@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------- */
+/* 02.Typography                               
+/* ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font : {
+        family: $font_heading;
+        weight: 700;
+    }
+    color: $color_black;   
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 1.5;
+}
+h1, .h1 {
+    font : {
+        size: 2.9rem;
+    }
+    @media only screen and (max-width:992px) {
+        font: {
+            size: 1.9rem;
+        }
+    }
+}
+h2, .h2 {
+    font : {
+        size: 2.5rem;
+    }
+    @media only screen and (max-width:992px) {
+        font: {
+           size: 2rem;
+        }
+    }
+}
+h3, .h3 {
+    font : {
+        size: 2.3rem;
+    }
+    @media only screen and (max-width:992px) {
+        font: {
+           size: 1.8rem;
+        }
+    }
+}
+h4, .h4 {
+    font : {  
+        size: 2.1rem;
+    }
+    @media only screen and (max-width:992px) {
+        font: {
+           size: 1.7rem;
+        }
+    }
+}
+h5, .h5 {
+    font : {
+        size: 1.467rem;
+    }
+    @media only screen and (max-width:992px) {
+        font: {
+           size: 1.3rem;
+        }
+    }
+}
+h6, .h6 {
+    font : {
+        size: 1.2rem;
+    }
+}
+p {
+    line-height: 30px;
+    margin: 0;
+    @media only screen and (max-width:992px) {
+        font: {
+            //size: 15px;
+        }
+     }
+}

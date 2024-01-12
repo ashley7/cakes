@@ -11,10 +11,37 @@
  
 @endsection
 
+
+@section('styles')
+
+<style>
+      @media print {
+         html,
+         body {
+            display: none;
+         }
+      }
+
+      html {
+         user-select: none;
+      }
+   </style>
+
+@endsection
+
 @push('scripts')
     <script> 
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
         });        
     </script>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+      if (event.keyCode === 44 || event.key === 'PrintScreen') {
+        event.preventDefault();
+        alert('Screenshots are not allowed on this page.');
+      }
+    });
+  </script>
 @endpush

@@ -1,0 +1,19 @@
+/* ---------------------------------------------------------------- */
+/* 27.Home Slider                            
+/* ---------------------------------------------------------------- */
+.hero-slider-wrap {
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    .container,.row, .banner-wrap {
+        height: 100%;
+    }
+    .vegas-overlay {
+        opacity: 0.7;
+        background: $color_dark_bg;
+    }
+}

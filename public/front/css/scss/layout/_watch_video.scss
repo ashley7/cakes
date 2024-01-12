@@ -1,0 +1,115 @@
+/* ---------------------------------------------------------------- */
+/* 13.Watch Video                           
+/* ---------------------------------------------------------------- */
+.how-it-work-img {
+    @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+.how-it-works-inner {
+    h4 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    ul {
+        .how-it-work-item {
+            margin-bottom: 20px;
+            &:after,&:before {
+                content: "";
+                clear: both;
+                display: block;
+            }
+           .how-it-work-icon {
+                border-right:5px dashed $color_primary;
+                border-bottom:5px solid $color_primary;
+                padding: 10px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 20px;
+                i {
+                    text-align: center;
+                    color: $color_white;
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    font: {
+                        size: 25px;
+                    }
+                    background: $color_primary;
+                }
+           }
+           .how-it-work-body {
+               h6 {
+                   margin-bottom: 8px;
+               }
+               p {
+                   margin-bottom: 0;
+               }
+           }
+        }
+    }
+}
+// Video
+#video-wrap {
+    z-index: 3;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../img/bg/watch-video.png);
+    background-size: cover;
+    background-position: center center;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: -3;
+        background: $color_primary;
+    }
+}
+.video-inner-wrap {
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    background: $color_white;
+    transition: $transition_default;
+    box-shadow: 0 20px 30px 0 $color_blue_shadow;
+    img {
+        border-radius: 20px;
+    }
+    .video-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: inline-block;
+        border-right:5px dashed $color_primary;
+        border-bottom:5px solid $color_primary;
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 50%;
+        i {
+            text-align: center;
+            color: $color_white;
+            display: inline-block;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            padding-left: 6px;
+            font: {
+                size: 30px;
+            }
+            background: $color_primary;
+        }
+    }
+}

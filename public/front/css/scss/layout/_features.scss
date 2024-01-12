@@ -1,0 +1,87 @@
+/* ---------------------------------------------------------------- */
+/* 11.Features                          
+/* ---------------------------------------------------------------- */
+.tab-link-wrap {
+    .tab-link-item {
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 30px;
+        .tab-link-inner {
+            padding: 40px;
+            text-align: center;
+            border-radius:5px;
+            transition: $transition_default;
+            box-shadow: 0 20px 30px 0 $color_blue_shadow;
+        }
+        span {
+            display: block;
+            margin-bottom: 30px;
+            &::before {
+                font-size: 80px;
+                color: $color_primary;
+                margin-left: 0;
+                line-height: 80px;
+            }
+        }
+        &.active, &:hover {
+            .tab-link-inner {
+                background: $color_primary;
+                box-shadow: 0 23px 49px 0 rgba($color_primary,0.35);
+            }
+            span {
+                &::before {
+                    color: $color_white;
+                }
+            }
+            h6 {
+                color: $color_white;
+            }
+        }
+    }
+}
+// Tab Content
+.tab-content-item {
+    display: none;
+    &.active {
+        display: block;
+        animation: fadeInUp 0.5s ease;
+    }
+}
+.tab-content-inner {
+    h4 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    ul {
+        margin-bottom: 30px;
+        li {
+            margin-top: 10px;
+            color: $color_black;
+            font: {
+                weight: 500;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+            &::before {
+               content: "\f192";
+               padding-right: 15px;
+               color: $color_primary;
+               vertical-align: middle;
+               font: {
+                   family: "Font Awesome 5 Free";
+                   weight: 700;
+               }
+            }
+        }
+    }
+}
+ /* Responsive Media Query */
+ .features-tab-image {
+    @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}

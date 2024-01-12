@@ -19,7 +19,7 @@
                 </div>
             @endif
             <div class="table-responsive">
-                <table class="table">
+                <table class="table table-hover table-striped">
                     <thead>
                         <th>ID</th> <th>Date sent</th> <th>Name</th> <th>Email</th> <th>Time recieved</th>
                     </thead>
@@ -76,3 +76,4 @@
   </div>
 </div>
 @endsection
+

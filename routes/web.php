@@ -7,19 +7,12 @@ Route::get('/', function () {
 
     if (Auth::guest())
 
-        return view('auth.login');
+        return view('welcome');
 
     return redirect("home");
 
 });
 
-
-
-Route::get('/mail', function () {
-
-    return  view("mail.sale");
-
-});
 
 Auth::routes();
 

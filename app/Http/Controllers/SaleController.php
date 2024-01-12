@@ -93,9 +93,7 @@ class SaleController extends Controller
 
         $sale = Sale::where('email',$email)->get();
 
-        if(empty($sale)) 
-        
-            return "Resource Not found";
+        if(empty($sale))  return view('sales.bad_file')->with(['messages'=>'Resource Not found']);     
 
         $sale = $sale->last();
 
@@ -115,7 +113,7 @@ class SaleController extends Controller
       
         if (!isset($_COOKIE['maselah_cackes']))  
         
-            return "It is nolonger your file";
+            return view('sales.bad_file')->with(['messages'=>'It is nolonger your file']);
 
         if($_COOKIE['maselah_cackes'] == $hex_email)  {
 
@@ -126,7 +124,8 @@ class SaleController extends Controller
             return view('sales.accessfile')->with($data);
 
         }
-            return "Coockie: ".$_COOKIE['maselah_cackes']." = ".$hex_email;
+
+        return view('sales.bad_file')->with(['messages'=>'Coockie: '.$_COOKIE['maselah_cackes']]);          
         
     }
 

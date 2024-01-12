@@ -1,0 +1,115 @@
+/* ---------------------------------------------------------------- */
+/* 06.Form(Input, Comment)                             
+/* ---------------------------------------------------------------- */
+.form-input {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 5px;
+    transition: $transition_default;
+    box-shadow: 0 20px 60px 0 $color_blue_shadow;
+    &:focus {
+        box-shadow: 0 23px 49px 0 rgba($color_primary,0.2);
+    }
+    &.contact-text-area {
+        margin-bottom: 28px;
+    }
+}
+.contact-alerts {
+    .empty-form span, .success-form span, .email-invalid span {
+        display: block;
+        padding: 20px 25px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .empty-form span, .email-invalid span {
+        background: $color_danger_bg;
+	    color: $color_danger_text;
+    }
+    .success-form span {
+        color: $color_black;
+    }
+}
+.comments-wrap {
+    .comments-item-wrap {
+        margin-bottom: 20px;
+        .comments-item {
+            display: flex;
+            align-items: flex-start;
+            .comment-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                a {
+                    color: $color_primary;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    font-weight: 500;
+                    line-height: 1;
+                    i {
+                        margin-right: 10px;                    
+                    }
+                }
+            }
+            img {
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+            &.sub-comment {
+                margin-top: 20px;
+                padding-left: 120px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.leave-comment-wrapper {
+    .comment-form-group {
+        position: relative;
+        .comment-form-control {
+            width: 100%;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            padding: 18px 20px;
+            border: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 20px 0 $color_blue_shadow;
+            &:focus {
+                box-shadow: 0 15px 30px 0 $color_blue_shadow;
+            }
+        }
+        button {
+            border:none;
+        }
+    }
+}
+.comment-block-mt {
+    margin-top: 30px;
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Extra Small devices (portrait phones, less than 576px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 575.98px) {
+    .comments-wrap {
+        .comments-item-wrap {
+            .comments-item {
+                display: block;
+                img {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+                &.sub-comment {
+                    padding-left: 100px;
+                }
+            }
+        }
+    }
+}

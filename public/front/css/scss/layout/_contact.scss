@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------------- */
+/* 20.Contact                           
+/* ---------------------------------------------------------------- */
+.contact-icon-box {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    transition: $transition_default;
+    box-shadow: 0 20px 60px 0 $color_blue_shadow;
+    &:hover {
+        background: $color_primary;
+        box-shadow: 0 23px 49px 0 rgba($color_primary,0.35);
+        .contact-body {
+            h5,p {
+                color: $color_white;
+            }
+        }
+        .contact-icon {
+            border-right:5px dashed $color_white;
+            border-bottom:5px solid $color_white;
+            i {
+                background: rgba($color_white, 0.1);
+            }
+        }
+    }
+    .contact-icon {
+        border-right:5px dashed $color_primary;
+        border-bottom:5px solid $color_primary;
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 50%;
+        i {
+            text-align: center;
+            color: $color_white;
+            display: inline-block;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            font: {
+                size: 50px;
+            }
+            background: $color_primary;
+        }
+    }
+    .contact-body {
+        h5 {
+            margin-bottom: 10px;
+        }
+    }
+}
+ /* Responsive Media Query */
+.contact-image {
+    @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
