@@ -2,7 +2,7 @@
 
 @section('content')
  <p>Desclimer: This book is subjected to Copy right and you shall not share or make duplicates of it or re-distribute it.</p>
- <embed src="{{asset('files/'.$sale->file_url)}}#toolbar=0" type="application/pdf" width="100%" frameborder="0" allowfullscreen></embed>                                          
+ <embed src="{{asset('files/'.$sale->file_url)}}#toolbar=0" type="application/pdf" width="100%" height="800px" frameborder="0" allowfullscreen></embed>                                          
     
  
 @endsection
