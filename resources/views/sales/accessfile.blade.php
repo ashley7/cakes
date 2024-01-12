@@ -17,7 +17,8 @@
 <style>
       @media print {
          html,
-         body {
+         body,
+         embed {
             display: none;
          }
       }
