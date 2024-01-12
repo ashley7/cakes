@@ -3,7 +3,11 @@
 @section('content')
 <div class="container">    
     <div class="card">               
-        <div class="card-body">     
+        <div class="card-body"> 
+           
+            <p>Desclimer: This book is subjected to Copy right and you shall not share or make duplicates of it or re-distribute it.</p>
+
+               
             <embed src="{{asset('files/'.$sale->file_url)}}#toolbar=0" type="application/pdf" width="100%" height="1000px" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts"></embed>                                          
         </div>
     </div>
