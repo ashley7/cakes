@@ -125,7 +125,7 @@ class SaleController extends Controller
 
         }
 
-        return view('sales.bad_file')->with(['message'=>'That is not your file']);          
+        return view('sales.bad_file')->with(['message'=>'Invalid Varification data '.$_COOKIE['maselah_cackes']]);          
         
     }
 
