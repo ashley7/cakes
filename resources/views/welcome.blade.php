@@ -94,7 +94,11 @@
                         </li>                       
                         
                         <li class="nav-item active">
+                            @if(Auth::guest())
                             <a class="nav-link" href="/login">Admin Login</a>
+                            @else 
+                            <a class="nav-link" href="/home">Home</a>
+                            @endif
                         </li>
                     </ul>
                 </div>

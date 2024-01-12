@@ -5,11 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    if (Auth::guest())
-
-        return view('welcome');
-
-    return redirect("home");
+    return view('welcome');     
 
 });
 
