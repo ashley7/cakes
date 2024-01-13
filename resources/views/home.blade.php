@@ -63,8 +63,8 @@
         <label for="email">Email</label>
         <input type="email" name="email" class="form-control">
 
-        <label for="file_url">Attach file</label> <br>
-        <input type="file" name="file_url">
+        <!-- <label for="file_url">Attach file</label> <br>
+        <input type="file" name="file_url"> -->
 
         <hr>
         <button type="submit" class="btn btn-primary">Send</button>

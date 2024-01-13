@@ -44,7 +44,6 @@ class SaleController extends Controller
         $rules = [
             'name'=>'required',
             'email'=>'required',
-            'file_url'=>'required',
         ];
 
         $this->validate($request,$rules);
@@ -57,9 +56,11 @@ class SaleController extends Controller
 
             $saveSale->name = $request->name;
 
-            $saveSale->email = $request->email;            
+            $saveSale->email = $request->email;   
+            
+            $saveSale->file_url = "N/A";
 
-            $saveSale->file_url =  Sale::uploadImage($request->file('file_url'));
+            // $saveSale->file_url =  Sale::uploadImage($request->file('file_url'));
 
             $saveSale->save();
 
