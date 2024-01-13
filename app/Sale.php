@@ -24,14 +24,18 @@ class Sale extends Model
              
     }
 
-    public static function setUserCoockie($value) {
-        // return response("File set successfully")->cookie(
-        //     'cakes', $value, time()
-        // );
+    public static function setUserCoockie($value) {       
 
-        Cookie::queue(Cookie::make('cake', $value, time()));
+        $time = now()->addDays()->timestamp;
+
+        Cookie::queue(Cookie::make('cake_book',$value,$time));
  
-        Cookie::queue('cake', $value, time());
+        Cookie::queue('cake_book',$value,$time);
+
+         return response("File set successfully")->cookie(
+            'cake_book',$value,$time
+        );
+
     }
 
   

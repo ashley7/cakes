@@ -103,7 +103,7 @@ class SaleController extends Controller
 
             Sale::setUserCoockie($hex_email);
     
-            if (!empty(Cookie::get('cake')))  {
+            if (!empty(Cookie::get('cake_book')))  {
 
                 $sale->time_accessed = now();
 
@@ -117,13 +117,13 @@ class SaleController extends Controller
 
         }
       
-        if (empty(Cookie::get('cake')))   
+        if (empty(Cookie::get('cake_book')))   
         
-            return view('sales.bad_file')->with(['message'=>'It is nolonger your file']);
+            return view('sales.bad_file')->with(['message'=>'It is nolonger your file or you have changed the browser']);
 
             readfile:
 
-        if(Cookie::get('cake')==$hex_email)  {
+        if(Cookie::get('cake_book')==$hex_email)  {
 
             $data = [
                 'sale'=>$sale    
@@ -133,7 +133,7 @@ class SaleController extends Controller
 
         }
 
-        return view('sales.bad_file')->with(['message'=>'Invalid Varification data '.Cookie::get('cake') ]);          
+        return view('sales.bad_file')->with(['message'=>'Invalid Varification data '.Cookie::get('cake_book') ]);          
         
     }
 
