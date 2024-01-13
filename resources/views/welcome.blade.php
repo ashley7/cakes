@@ -110,13 +110,13 @@
         <div class="banner-wrap">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-12">
                         <div class="banner-content">
                             <h1 class="wow fadeInUp" data-wow-delay="0.1s">We make Cakes for all kinds of ceremonies.</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">We make Cakes for all kinds of ceremonies, be it Weddings, Introductions/kwanjula, Bithday, Cake loaves and more</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 banner-right text-right wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-6 col-sm-12 banner-right text-right wow fadeInUp" data-wow-delay="0.3s">
                         <div class="img-jump">
                             <img src="{{asset('assets/images/front.gif')}}" alt="App image" class="img-fluid" style="border-radius: 5px;">
                         </div>
@@ -163,7 +163,7 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-sm-12">
                     <div class="section-heading">
                         <h2 class="section-title">We Make the Best Cakes</h2>
                         <p> We make Different cake flavours like, Vanilla cake, French vanilla cake, Traditional fruit cake, Orange cake, Pinnaple  cake, Tutifruity cake, Chocolate cake, Black forest, White forest, Chocolate fudge,Carrot cake, Lemon cake, Coconut cake, Red velvet cake and more.</p>
@@ -173,7 +173,7 @@
 
 
             <div class="row">
-                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-md-4 col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="services-item">
                          <img src="/assets/images/cake1.jpg" alt="" width="100%">
                          <div class="services-body">
@@ -184,7 +184,7 @@
                 </div>
 
 
-                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-4 col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="services-item">
                         <img src="/assets/images/cake2.jpg" alt="" width="100%">
                         <div class="services-body">
@@ -194,7 +194,7 @@
                     </div>
                 </div>  
 
-                <div class="col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-4 col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="services-item">
                         <img src="/assets/images/cake5.jpg" alt="" width="100%">
                         <div class="services-body">
