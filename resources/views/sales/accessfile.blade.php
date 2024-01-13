@@ -3,7 +3,68 @@
 @section('content')
 <div class="container">
   <p>Desclimer: This book is subjected to Copy right and you shall not share or make duplicates of it or re-distribute it.</p>
-  <iframe src="{{asset('files/'.$sale->file_url)}}#toolbar=0&scrollbar=1" type="application/pdf" width="100%" height="450px"></iframe> 
+
+    <img src="{{asset('book/1.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/2.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/3.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/4.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/5.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/6.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/7.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/8.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/9.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/10.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/11.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/12.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/13.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/14.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/15.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/16.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/17.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/18.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/19.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/20.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/21.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/22.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/23.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/24.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/25.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/26.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/27.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/28.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/29.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/30.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/31.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/32.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/33.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/34.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/35.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/36.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/37.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/38.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/39.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/40.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/41.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/42.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/43.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/44.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/45.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/46.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/47.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/48.PNG')}}" width="100%" alt="">
+
+    <img src="{{asset('book/49.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/50.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/50.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/51.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/52.PNG')}}" width="100%" alt="">
+    <img src="{{asset('book/53.PNG')}}" width="100%" alt=""> 
 </div> 
 @endsection
 @section('styles')
@@ -27,40 +88,10 @@
 @push('scripts')
 
 <script>
- function isPdfViewerAvailable() {
-  var mimeType = "application/pdf";
-
-  // Check if the browser has a PDF viewer using the navigator.mimeTypes array
-  if (navigator.mimeTypes && navigator.mimeTypes.length > 0) {
-    for (var i = 0; i < navigator.mimeTypes.length; i++) {
-      if (navigator.mimeTypes[i].type === mimeType) {
-        return true;
-      }
-    }
-  }
-
-  // Check if the browser supports the PDF MIME type using the ActiveXObject (for IE)
-  try {
-    new ActiveXObject('AcroPDF.PDF');
-    return true;
-  } catch (e) {
-    try {
-      new ActiveXObject('PDF.PdfCtrl');
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  return false;
-} 
-  
-if (!isPdfViewerAvailable()) {
-    alert('The browser does not have a PDF viewer.');
-    window.location.href = "https://manzelahcakes.com/";
-}
-
-</script>
-   
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+      alert("Right-click is disabled");
+    });
+  </script>
  
 @endpush

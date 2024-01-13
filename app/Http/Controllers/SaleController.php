@@ -7,6 +7,7 @@ use App\Sale;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\File;
 
 class SaleController extends Controller
 {
@@ -88,7 +89,7 @@ class SaleController extends Controller
      */
     public function show(Request $request, $hex_email)
     {    
-        
+ 
         $email = hex2bin($hex_email);
 
         $sale = Sale::where('email',$email)->get();
@@ -126,8 +127,8 @@ class SaleController extends Controller
         if(Cookie::get('cake_book')==$hex_email)  {
 
             $data = [
-                'sale'=>$sale    
-            ];
+                'sale'=>$sale,
+             ];
 
             return view('sales.accessfile')->with($data);
 
@@ -143,9 +144,11 @@ class SaleController extends Controller
      * @param  \App\Sale  $sale
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sale $sale)
+    public function edit($sale)
     {
-        //
+   
+            
+
     }
 
     /**
