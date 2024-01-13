@@ -27,24 +27,38 @@
 @push('scripts')
 
 <script>
-  function isPdfViewerAvailable() {
-  if (
-    typeof PDFObject !== 'undefined' ||
-    (navigator.mimeTypes && navigator.mimeTypes['application/pdf']) ||
-    (!!new ActiveXObject('AcroPDF.PDF') || !!new ActiveXObject('PDF.PdfCtrl') ) )
-       return true;
+ function isPdfViewerAvailable() {
+  var mimeType = "application/pdf";
 
-       return false;
+  // Check if the browser has a PDF viewer using the navigator.mimeTypes array
+  if (navigator.mimeTypes && navigator.mimeTypes.length > 0) {
+    for (var i = 0; i < navigator.mimeTypes.length; i++) {
+      if (navigator.mimeTypes[i].type === mimeType) {
+        return true;
+      }
+    }
   }
+
+  // Check if the browser supports the PDF MIME type using the ActiveXObject (for IE)
+  try {
+    new ActiveXObject('AcroPDF.PDF');
+    return true;
+  } catch (e) {
+    try {
+      new ActiveXObject('PDF.PdfCtrl');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  return false;
+} 
   
- 
- 
 if (!isPdfViewerAvailable()) {
     alert('The browser does not have a PDF viewer.');
     window.location.href = "https://manzelahcakes.com/";
-} 
-
-
+}
 
 </script>
    
