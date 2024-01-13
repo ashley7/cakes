@@ -90,19 +90,20 @@
 <script>
     document.addEventListener('contextmenu', function(event) {
       event.preventDefault();
-      alert("Right-click is disabled");
+      alert("This is a protected file, You can not copy from it");
     });
   </script>
 
 <script>
     document.addEventListener('keyup',(event) => {
+
       if(event.key == "PrintScreen"){
 
         navigator.clipboard.writeText('');
 
+        alert("This is a protected file, You can not copy from it");
+
       }
-      
-      alert("Screen is disabled");
     });
   </script>
  
