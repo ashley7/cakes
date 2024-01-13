@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <p>Desclimer: This book is subjected to Copy right and you shall not share or make duplicates of it or re-distribute it.</p>
-  <iframe src="{{asset('files/'.$sale->file_url)}}#toolbar=0&scrollbar=0" type="application/pdf" width="100%" height="450px"></iframe> 
+  <iframe src="{{asset('files/'.$sale->file_url)}}#toolbar=0&scrollbar=1" type="application/pdf" width="100%" height="450px"></iframe> 
 </div> 
 @endsection
 @section('styles')
