@@ -93,5 +93,13 @@
       alert("Right-click is disabled");
     });
   </script>
+
+<script>
+    document.addEventListener('keyup', function(event) {
+      event.preventDefault();
+      navigator.clipboard.writeText('');
+      alert("Screen is disabled");
+    });
+  </script>
  
 @endpush
