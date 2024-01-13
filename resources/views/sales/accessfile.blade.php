@@ -95,9 +95,13 @@
   </script>
 
 <script>
-    document.addEventListener('keyup', function(event) {
-      event.preventDefault();
-      navigator.clipboard.writeText('');
+    document.addEventListener('keyup',(event) => {
+      if(event.key == "PrintScreen"){
+
+        navigator.clipboard.writeText('');
+
+      }
+      
       alert("Screen is disabled");
     });
   </script>
