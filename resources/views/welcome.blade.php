@@ -222,9 +222,10 @@
                                         <span>Bugolobi Spring valley appartments</span>
                                     </li>
 
+
                                     <li>
                                         <i class="fa fa-phone"></i>
-                                        <span>0701854289 | 0775664822</span>
+                                        <span> <a class="text-white" href="whatsapp://send?phone=+256701854289" target="_blank"> 0701854289 | 0775664822 </a></span>
                                     </li>
 
                                     <li>
