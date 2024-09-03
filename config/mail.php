@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        // 'address' => env('MAIL_FROM_ADDRESS', 'mysticahope2013@gmail.com'),
-        'address' => 'mysticahope2013@gmail.com',
+        'address' => env('MAIL_FROM_ADDRESS', 'adurbarbra@agrosupplyltd.com'),
+        // 'address' => 'mysticahope2013@gmail.com',
         'name' => 'Manzelah Group of Companies',
     ],
 
