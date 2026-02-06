@@ -20,6 +20,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('sales','SaleController@store');
 
+    Route::delete('sales/{sale_id}','SaleController@destroy');
+
 });
 
  

@@ -21,7 +21,7 @@
             <div class="table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
-                        <th>ID</th> <th>Date sent</th> <th>Name</th> <th>Email</th> <th>Time recieved</th>
+                        <th>ID</th> <th>Date sent</th> <th>Name</th> <th>Email</th> <th>Time recieved</th> <th></th>
                     </thead>
 
                     <tbody>
@@ -32,6 +32,13 @@
                             <td>{{$sale->name}}</td>
                             <td>{{$sale->email}}</td>
                             <td>{{$sale->time_accessed}}</td>
+                            <td>
+                                <form action="{{ route('sales.destroy',$sale->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
