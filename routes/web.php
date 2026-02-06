@@ -18,9 +18,10 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/home', 'HomeController@index')->name('home');
 
-    Route::post('sales','SaleController@store');
 
-    Route::delete('sales/{sale_id}','SaleController@destroy');
+    Route::resource('sales','SaleController');
+
+ 
 
 });
 
